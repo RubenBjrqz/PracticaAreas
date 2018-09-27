@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="PracticaAreas.ControlAreaTrapecio"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PracticaAreas"
+             mc:Ignorable="d" 
+             d:DesignHeight="550" d:DesignWidth="650">
+    <Grid Background="White">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <!-- Titulo -->
+            <RowDefinition Height="30"/>
+            <!-- Rectangulo -->
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <!-- Titulo -->
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="Trapecio" Grid.ColumnSpan="4" FontFamily="Arial" FontSize="22" FontWeight="Bold" Margin="10,0,-10,0"/>
+        <TextBlock Grid.Column="0" Grid.Row="2" Text="Base mayor:" FontFamily="Arial" FontSize="18" Margin="10,5,10,5"/>
+        <TextBox Grid.Column="0" Grid.Row="3" Margin="10,0"/>
+        <TextBlock Grid.Column="1" Grid.Row="2" Text="Base menor:" FontFamily="Arial" FontSize="18" Margin="10,5,10,5"/>
+        <TextBox Grid.Column="1" Grid.Row="3" Margin="10,0"/>
+        <TextBlock Grid.Column="0" Grid.Row="16" Text="Altura:" FontFamily="Arial" FontSize="18" Margin="10,5,10,5"/>
+        <TextBlock Grid.Column="0" Grid.Row="4" Text="Altura:" FontFamily="Arial" FontSize="18" Margin="10,5"/>
+        <TextBox Grid.Column="0" Grid.Row="17" Margin="10,0"/>
+    </Grid>
+</UserControl>
