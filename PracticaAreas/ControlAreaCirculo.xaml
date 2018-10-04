@@ -6,24 +6,16 @@
              xmlns:local="clr-namespace:PracticaAreas"
              mc:Ignorable="d" 
              d:DesignHeight="550" d:DesignWidth="650">
-    <Grid Background="White">
+    <Grid Background="Beige">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
-            <ColumnDefinition Width="200"/>
-            <ColumnDefinition Width="100"/>
-            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <!-- Titulo -->
-            <RowDefinition Height="30"/>
-            <!-- Rectangulo -->
-            <RowDefinition Height="25"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
         </Grid.RowDefinitions>
-        <!-- Titulo -->
-        <TextBlock Grid.Column="0" Grid.Row="1" Text="Circulo" Grid.ColumnSpan="4" FontFamily="Arial" FontSize="22" FontWeight="Bold" Margin="10,0,-10,0"/>
-        <TextBlock Grid.Column="0" Grid.Row="2" Text="Radio:" FontFamily="Arial" FontSize="18" Margin="10,5,10,5"/>
-        <TextBox Grid.Column="0" Grid.Row="3" Margin="10,0"/>
+        <TextBlock Text="Radio:" Grid.Column="0" Grid.Row="0"/>
+        <TextBox x:Name="txtRadio" Grid.Column="0" Grid.Row="1"/>
     </Grid>
 </UserControl>

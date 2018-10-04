@@ -6,31 +6,28 @@
         xmlns:local="clr-namespace:PracticaAreas"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="650">
-    <Grid Name="grdContenedor">
+    <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="325"/>
-            <ColumnDefinition Width="325"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <!-- Titulo -->
-            <RowDefinition Height="30"/>
-            <!-- Rectangulo -->
-            <RowDefinition Height="25"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <!-- Titulo -->
-        <TextBlock Grid.Column="0" Grid.Row="0" Text="Áreas de figuras geométricas" Grid.ColumnSpan="4" FontFamily="Arial" FontSize="22" FontWeight="Bold" Margin="10,0,-10,0"/>
-        <ComboBox Name="cbTipoFigura" Grid.Column="0" Grid.Row="1" SelectionChanged="cbTipoFigura_SelectionChanged">
+        <TextBlock Text="Áreas de Figuras Geométricas" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Margin="10,0,51,0"></TextBlock>
+        <TextBlock Text="Área:" Grid.Column="3" Grid.Row="1"></TextBlock>
+        <Button VerticalAlignment="Top" Click="Button_Click" Grid.Column="2" Grid.Row="2">CALCULAR</Button>
+        <TextBlock Name="lblResultadoArea" Text="0.0" Grid.Column="3" Grid.Row="2"></TextBlock>
+        <ComboBox Name="cbTipoFigura" Grid.Column="0" Grid.Row="1" SelectionChanged="cbTipoFigura_SelectionChanged" Grid.ColumnSpan="2" Margin="10,0,223,0">
             <ComboBoxItem>Rectángulo</ComboBoxItem>
-            <ComboBoxItem>Triangulo</ComboBoxItem>
-            <ComboBoxItem>Circulo</ComboBoxItem>
+            <ComboBoxItem>Triángulo</ComboBoxItem>
+            <ComboBoxItem>Círculo</ComboBoxItem>
             <ComboBoxItem>Trapecio</ComboBoxItem>
         </ComboBox>
-        <StackPanel Name="panelConfiguracion">
-        </StackPanel>
-        <Button Grid.Column="1" Grid.Row="3" Click="Button_Click" FontFamily="Arial" Margin="87,0,157,0" Content="Calcular"/>
-        <TextBlock Grid.Column="1" Grid.Row="2" Text="Área:" FontFamily="Arial" FontSize="18" Margin="228,5,-4,5"/>
-        <TextBlock Name="lblResultadoArea" Grid.Column="1" Grid.Row="3" Text="0.00" FontFamily="Arial" FontSize="18" Margin="228,0,-4,0"/>
+        <StackPanel Name="panelConfiguracion" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"></StackPanel>
     </Grid>
 </Window>
